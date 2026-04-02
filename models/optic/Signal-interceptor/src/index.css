@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-cyan: #00f0ff;
+  --neon-orange: #ff6b2b;
+  --neon-red: #ff2d55;
+  --neon-green: #39ff14;
+  --neon-blue: #4361ee;
+  --node-color: #4361ee;
+  --antinode-color: #ff2d55;
+  --bg-dark: #0a0a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-dark);
+  color: white;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.font-orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.scan-line {
+  animation: scan-line 4s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.8;
+  }
+  94% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.9;
+  }
+  97% {
+    opacity: 1;
+  }
+}
